@@ -1,5 +1,5 @@
 Supermartian's dotfiles
 =======================
 
-*vim config file
-*tmux & tmux-powerline config file
+1. vim config file
+2. tmux & tmux-powerline config file
