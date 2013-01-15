@@ -23,10 +23,10 @@ map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC>:NERDTreeToggle<CR>
 map <F4> :TlistToggle<CR>
 imap <F4> <ESC>:TlistToggle<CR>
-map <F5> \cs
-imap <F5> <ESC>\cs
-map <F6> \cu
-imap <F6> <ESC>\cu
+map <F5> <Leader>cs
+imap <F5> <ESC><Leader>cs
+map <F6> <Leader>cu
+imap <F6> <ESC><Leader>cu
 
 " Tab switching
 map <Leader><Right> :tabn<CR>
