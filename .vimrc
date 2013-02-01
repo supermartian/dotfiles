@@ -12,21 +12,33 @@ set tabstop=4
 set fileencodings=ucs-bom,utf-8,chinese
 let mapleader=','
 
+" Copy to CLIPBOARD, and use 'y' to copy to the PRIMARY
+map <leader>y "+y
+map <leader>p "+p
+
 " Powerline settings
 set laststatus=2
 set t_Co=256
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 let g:Powerline_symbols='fancy'
 
-" Coding stuff settings
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC>:NERDTreeToggle<CR>
+" Taglist 
 map <F4> :TlistToggle<CR>
 imap <F4> <ESC>:TlistToggle<CR>
+
+" NerdCommentor
 map <F5> <Leader>cs
 imap <F5> <ESC><Leader>cs
 map <F6> <Leader>cu
 imap <F6> <ESC><Leader>cu
+
+" NerdTree
+let NERDTreeIgnore=['cscope.in.out', 'cscope.out', 'cscope.files', 'cscope.po.out', 'tags', '\.swp$']
+map <F3> :NERDTreeToggle<CR>
+imap <F3> <ESC>:NERDTreeToggle<CR>
+
+" js-syntax
+au FileType javascript call JavaScriptFold()
 
 " Tab switching
 map <Leader><Right> :tabn<CR>
@@ -55,11 +67,14 @@ Bundle "mutewinter/vim-indent-guides"
 Bundle "cucumber.zip"
 Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/nerdcommenter"
+Bundle "vim-scripts/matrix.vim--Yang"
 Bundle 'nelstrom/vim-mac-classic-theme'
 Bundle "L9"
 Bundle "FuzzyFinder"
 Bundle "vim-scripts/taglist.vim"
 Bundle "vim-scripts/cscope_macros.vim"
+Bundle "jelera/vim-javascript-syntax"
+Bundle "plasticboy/vim-markdown"
 filetype plugin indent on
 
 " For my foot switch which is bond to F12
