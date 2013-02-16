@@ -73,7 +73,6 @@ Bundle "L9"
 Bundle "FuzzyFinder"
 Bundle "vim-scripts/taglist.vim"
 Bundle "vim-scripts/cscope_macros.vim"
-Bundle "jelera/vim-javascript-syntax"
 Bundle "plasticboy/vim-markdown"
 filetype plugin indent on
 
