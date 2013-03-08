@@ -42,13 +42,9 @@ au FileType javascript call JavaScriptFold()
 
 " Tab switching
 map <Leader><Right> :tabn<CR>
-imap <Leader><Right> <ESC>:tabn<CR>
 map <Leader><Left> :tabp<CR>
-imap <Leader><Left> <ESC>:tabp<CR>
 map <Leader><Down> :tabc<CR>
-imap <Leader><Down> <ESC>:tabc<CR>
 map <Leader><Up> :tabe<CR>
-imap <Leader><Up> :tabe<CR>
 
 " Clear tailing white space
 map <F8> :%s/ *$//g<CR>
@@ -74,6 +70,7 @@ Bundle "FuzzyFinder"
 Bundle "vim-scripts/taglist.vim"
 Bundle "vim-scripts/cscope_macros.vim"
 Bundle "plasticboy/vim-markdown"
+Bundle "walm/jshint.vim"
 filetype plugin indent on
 
 " For my foot switch which is bond to F12
