@@ -19,7 +19,7 @@ map <leader>p "+p
 " Powerline settings
 set laststatus=2
 set t_Co=256
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 let g:Powerline_symbols='fancy'
 
 " Taglist 
