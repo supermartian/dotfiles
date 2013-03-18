@@ -37,8 +37,10 @@ let NERDTreeIgnore=['cscope.in.out', 'cscope.out', 'cscope.files', 'cscope.po.ou
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC>:NERDTreeToggle<CR>
 
-" js-syntax
-au FileType javascript call JavaScriptFold()
+" EasyPeasy
+let g:tag_directory = "~/.vim/tags/"
+let g:tag_extension = ".tags"
+let g:include_paths = "/usr/include/,/usr/local/include/"
 
 " Tab switching
 map <Leader><Right> :tabn<CR>
@@ -71,6 +73,7 @@ Bundle "vim-scripts/taglist.vim"
 Bundle "vim-scripts/cscope_macros.vim"
 Bundle "plasticboy/vim-markdown"
 Bundle "walm/jshint.vim"
+Bundle "vim-scripts/EasyPeasy"
 filetype plugin indent on
 
 " For my foot switch which is bond to F12
