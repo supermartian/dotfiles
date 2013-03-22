@@ -74,6 +74,7 @@ Bundle "vim-scripts/cscope_macros.vim"
 Bundle "plasticboy/vim-markdown"
 Bundle "walm/jshint.vim"
 Bundle "vim-scripts/EasyPeasy"
+Bundle "aperezdc/vim-template"
 filetype plugin indent on
 
 " For my foot switch which is bond to F12
