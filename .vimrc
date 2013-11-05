@@ -2,6 +2,8 @@
 "
 
 " Common settings
+syntax on
+hi PreProc ctermfg=magenta cterm=bold guifg=#FF00FF
 set nocst
 set nu
 set expandtab
@@ -11,6 +13,21 @@ set shiftwidth=4
 set tabstop=4
 set fileencodings=ucs-bom,utf-8,chinese
 let mapleader=','
+
+" Autocomplete settings
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Jump to the next line of the editor, not the __LINE__
+nnoremap j gj
+nnoremap k gk
+
+" Paste
+set pastetoggle=<F2>
+
+" list
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " Copy to CLIPBOARD, and use 'y' to copy to the PRIMARY
 map <leader>y "+y
@@ -77,6 +94,10 @@ Bundle "vim-scripts/EasyPeasy"
 Bundle "aperezdc/vim-template"
 Bundle "othree/xml.vim"
 Bundle "Chiel92/vim-autoformat"
+Bundle "katonori/binedit.vim"
+Bundle "vim-scripts/DrawIt"
+Bundle "terryma/vim-smooth-scroll"
+Bundle "terryma/vim-multiple-cursors"
 filetype plugin indent on
 
 " For my foot switch which is bond to F12
