@@ -1,9 +1,13 @@
 " supermartian's vimrc
 "
 
+" Shit happens on MAC
+let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
+
 " Common settings
 syntax on
-hi PreProc ctermfg=magenta cterm=bold guifg=#FF00FF
+set background=dark
+colorscheme solarized
 set nocst
 set nu
 set expandtab
@@ -12,6 +16,7 @@ set autoindent
 set shiftwidth=4
 set tabstop=4
 set fileencodings=ucs-bom,utf-8,chinese
+set encoding=utf-8
 let mapleader=','
 
 " Autocomplete settings
@@ -35,9 +40,8 @@ map <leader>p "+p
 
 " Powerline settings
 set laststatus=2
-set t_Co=256
-" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
-let g:Powerline_symbols='fancy'
+set rtp+=~/PowerLine/powerline/bindings/vim
+let g:Powerline_symbols = 'fancy'
 
 " Taglist 
 map <F4> :TlistToggle<CR>
@@ -74,7 +78,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
@@ -98,6 +101,7 @@ Bundle "katonori/binedit.vim"
 Bundle "vim-scripts/DrawIt"
 Bundle "terryma/vim-smooth-scroll"
 Bundle "terryma/vim-multiple-cursors"
+Bundle "ervandew/supertab"
 filetype plugin indent on
 
 " For my foot switch which is bond to F12
