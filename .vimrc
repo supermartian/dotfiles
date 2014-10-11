@@ -1,13 +1,9 @@
 " supermartian's vimrc
 "
 
-" Shit happens on MAC
-let Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8/bin/ctags'
-
 " Common settings
 syntax on
 set background=dark
-colorscheme solarized
 set nocst
 set nu
 set expandtab
@@ -75,34 +71,34 @@ map <F8> :%s/ *$//g<CR>
 " Vundle settings
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle "mutewinter/vim-indent-guides"
-Bundle "cucumber.zip"
-Bundle "scrooloose/nerdtree"
-Bundle "scrooloose/nerdcommenter"
-Bundle "vim-scripts/matrix.vim--Yang"
-Bundle 'nelstrom/vim-mac-classic-theme'
-Bundle "L9"
-Bundle "FuzzyFinder"
-Bundle "vim-scripts/taglist.vim"
-Bundle "vim-scripts/cscope_macros.vim"
-Bundle "plasticboy/vim-markdown"
-Bundle "walm/jshint.vim"
-Bundle "vim-scripts/EasyPeasy"
-Bundle "aperezdc/vim-template"
-Bundle "othree/xml.vim"
-Bundle "Chiel92/vim-autoformat"
-Bundle "katonori/binedit.vim"
-Bundle "vim-scripts/DrawIt"
-Bundle "terryma/vim-smooth-scroll"
-Bundle "terryma/vim-multiple-cursors"
-Bundle "ervandew/supertab"
-filetype plugin indent on
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'mutewinter/vim-indent-guides'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/matrix.vim--Yang'
+Plugin 'nelstrom/vim-mac-classic-theme'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/cscope_macros.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'walm/jshint.vim'
+Plugin 'vim-scripts/EasyPeasy'
+Plugin 'aperezdc/vim-template'
+Plugin 'othree/xml.vim'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'katonori/binedit.vim'
+Plugin 'vim-scripts/DrawIt'
+Plugin 'terryma/vim-smooth-scroll'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ervandew/supertab'
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " For my foot switch which is bond to F12
 imap <F12> <ESC> j
