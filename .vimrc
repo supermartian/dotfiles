@@ -6,7 +6,7 @@ syntax on
 set background=dark
 set nocst
 set nu
-set expandtab
+"set expandtab
 set fileformat=unix
 set autoindent
 set shiftwidth=4
@@ -97,6 +97,7 @@ Plugin 'vim-scripts/DrawIt'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
+Plugin 'vim-scripts/tla.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
