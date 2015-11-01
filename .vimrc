@@ -65,6 +65,14 @@ map <Leader><Left> :tabp<CR>
 map <Leader><Down> :tabc<CR>
 map <Leader><Up> :tabe<CR>
 
+" Go lang
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
 " Clear tailing white space
 map <F8> :%s/ *$//g<CR>
 
@@ -98,6 +106,7 @@ Plugin 'terryma/vim-smooth-scroll'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/tla.vim'
+Plugin 'fatih/vim-go'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
