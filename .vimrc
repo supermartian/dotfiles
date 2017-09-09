@@ -35,24 +35,24 @@ map <leader>y "+y
 map <leader>p "+p
 
 " Powerline settings
-set laststatus=2
-set rtp+=~/PowerLine/powerline/bindings/vim
-let g:Powerline_symbols = 'fancy'
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 " Taglist 
-map <F4> :TlistToggle<CR>
-imap <F4> <ESC>:TlistToggle<CR>
+map <Leader>4 :TlistToggle<CR>
+imap <Leader>4 <ESC>:TlistToggle<CR>
 
 " NerdCommentor
-map <F5> <Leader>cs
-imap <F5> <ESC><Leader>cs
-map <F6> <Leader>cu
-imap <F6> <ESC><Leader>cu
+map <Leader>5 <Leader>cs
+imap <Leader>5 <ESC><Leader>cs
+map <Leader>6 <Leader>cu
+imap <Leader>6 <ESC><Leader>cu
 
 " NerdTree
 let NERDTreeIgnore=['cscope.in.out', 'cscope.out', 'cscope.files', 'cscope.po.out', 'tags', '\.swp$']
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC>:NERDTreeToggle<CR>
+map <Leader>3 :NERDTreeToggle<CR>
+imap <Leader>3 <ESC>:NERDTreeToggle<CR>
 
 " EasyPeasy
 let g:tag_directory = "~/.vim/tags/"
@@ -60,10 +60,10 @@ let g:tag_extension = ".tags"
 let g:include_paths = "/usr/include/,/usr/local/include/"
 
 " Tab switching
-map <Leader><Right> :tabn<CR>
-map <Leader><Left> :tabp<CR>
-map <Leader><Down> :tabc<CR>
-map <Leader><Up> :tabe<CR>
+map <Leader>l :tabn<CR>
+map <Leader>h :tabp<CR>
+map <Leader>j :tabc<CR>
+map <Leader>k :tabe<CR>
 
 " Go lang
 let g:go_highlight_functions = 1
@@ -74,7 +74,7 @@ let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
 " Clear tailing white space
-map <F8> :%s/ *$//g<CR>
+map <Leader>8 :%s/ *$//g<CR>
 
 " Vundle settings
 set nocompatible
@@ -85,7 +85,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'mutewinter/vim-indent-guides'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/matrix.vim--Yang'
@@ -107,6 +106,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/tla.vim'
 Plugin 'fatih/vim-go'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 call vundle#end()            " required
 filetype plugin indent on    " required
 
