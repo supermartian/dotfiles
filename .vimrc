@@ -34,11 +34,6 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 map <leader>y "+y
 map <leader>p "+p
 
-" Powerline settings
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-
 " Taglist 
 map <Leader>4 :TlistToggle<CR>
 imap <Leader>4 <ESC>:TlistToggle<CR>
